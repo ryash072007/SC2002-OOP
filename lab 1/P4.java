@@ -11,7 +11,7 @@ public class P4 {
         if (height < 1)
         {
             System.out.println("Error!");
-            System.exit(1);
+            return;
         }
 
         for (int cur_hei = 1; cur_hei < height + 1; cur_hei++) {

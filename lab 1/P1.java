@@ -17,7 +17,6 @@ public class P1
             case "D", "d":
                 System.out.println("Drama Movie Fan");
                 break;
-            
             default:
                 System.out.println("Invalid Choice");
         }
