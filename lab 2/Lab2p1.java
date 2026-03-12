@@ -63,9 +63,7 @@ public class Lab2p1 {
                     System.out.print("Enter n: ");
                     long n = sc6.nextLong();
                     long result = extractOddDigits(n);
-                    if (result != -1) {
-                        System.out.printf("oddDigits = %d\n", result);
-                    }
+                    System.out.printf("oddDigits = %d\n", result);
                     break;
                 }
                 case 7:
