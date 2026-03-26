@@ -1,24 +1,21 @@
 public class Pyramid implements Shape {
-    private double baseLength;
-    private double baseWidth;
+    private double baseSide;
     private double height;
 
-    public Pyramid(double baseLength, double baseWidth, double height) {
-        this.baseLength = baseLength;
-        this.baseWidth = baseWidth;
+    public Pyramid(double baseSide, double height) {
+        this.baseSide = baseSide;
         this.height = height;
     }
 
     @Override
     public double calculateArea() {
-        double slantHeightLength = Math.sqrt((baseWidth / 2.0) * (baseWidth / 2.0) + height * height);
-        double slantHeightWidth = Math.sqrt((baseLength / 2.0) * (baseLength / 2.0) + height * height);
+        double slantHeight = Math.sqrt((baseSide / 2.0) * (baseSide / 2.0) + height * height);
 
-        double baseArea = baseLength * baseWidth;
-        double sideArea1 = baseLength * slantHeightLength;
-        double sideArea2 = baseWidth * slantHeightWidth;
+        Shape baseFace = new Square(baseSide);
+        Shape sideFace = new Triangle(baseSide, slantHeight);
 
-        return baseArea + sideArea1 + sideArea2;
+        return baseFace.calculateArea()
+                + 4 * sideFace.calculateArea();
     }
 
     @Override

@@ -12,8 +12,9 @@ public class Shape3DApp {
             System.out.println("\nChoose 3D shape " + (i + 1) + ":");
             System.out.println("1. Sphere");
             System.out.println("2. Cuboid");
-            System.out.println("3. Cone");
-            System.out.println("4. Cylinder");
+            System.out.println("3. Square-based Pyramid");
+            System.out.println("4. Cone");
+            System.out.println("5. Cylinder");
             System.out.print("Your choice: ");
             int shapeChoice = scanner.nextInt();
 
@@ -33,13 +34,20 @@ public class Shape3DApp {
                     shapes[i] = new Cuboid(length, breadth, height);
                     break;
                 case 3:
+                    System.out.print("Enter base side: ");
+                    double pBaseSide = scanner.nextDouble();
+                    System.out.print("Enter height: ");
+                    double pHeight = scanner.nextDouble();
+                    shapes[i] = new Pyramid(pBaseSide, pHeight);
+                    break;
+                case 4:
                     System.out.print("Enter radius: ");
                     double cRadius = scanner.nextDouble();
                     System.out.print("Enter height: ");
                     double cHeight = scanner.nextDouble();
                     shapes[i] = new Cone(cRadius, cHeight);
                     break;
-                case 4:
+                case 5:
                     System.out.print("Enter radius: ");
                     double yRadius = scanner.nextDouble();
                     System.out.print("Enter height: ");

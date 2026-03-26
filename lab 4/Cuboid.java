@@ -11,7 +11,11 @@ public class Cuboid implements Shape {
 
     @Override
     public double calculateArea() {
-        return 2 * (length * breadth + length * height + breadth * height);
+        Shape faceLB = new Rectangle(length, breadth);
+        Shape faceLH = new Rectangle(length, height);
+        Shape faceBH = new Rectangle(breadth, height);
+
+        return 2 * faceLB.calculateArea() + 2 * faceLH.calculateArea() + 2 * faceBH.calculateArea();
     }
 
     @Override

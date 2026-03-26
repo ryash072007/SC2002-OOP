@@ -9,8 +9,11 @@ public class Cone implements Shape {
 
     @Override
     public double calculateArea() {
+        Shape baseCircle = new Circle(radius);
         double slantHeight = Math.sqrt(radius * radius + height * height);
-        return Math.PI * radius * (radius + slantHeight);
+        double curvedSurfaceArea = Math.PI * radius * slantHeight;
+
+        return baseCircle.calculateArea() + curvedSurfaceArea;
     }
 
     @Override

@@ -36,16 +36,15 @@
 - Cylinder surface area: `2 * pi * r * (r + h)`
 - Cone surface area: `pi * r * (r + slantHeight)`, `slantHeight = sqrt(r^2 + h^2)`
 - Square-based pyramid surface area:
-  - base + 4 side triangles (implemented using 2 paired triangle terms for rectangular-base generality)
+  - base + 4 identical side triangles (square base only)
 
 ## Sample results I got
 - `WeeklySales` top rank starts with: `Taylor, Harry: 7300`
 - `Shape2DApp` sample option total area: `1564.16`
-- `Shape3DApp` sample option 1 total surface area: `8233.67`
-- `Shape3DApp` sample option 2 total surface area: `6186.61`
+- `Shape3DApp` supports custom 3D-shape input flow and calculates total surface area from entered data.
 
 ## Possible TA questions
 - Why not use inheritance between 2D and 3D shapes?
   - I used a shared `Shape` interface for polymorphism; area behavior is unified while dimensions/formulas stay shape-specific.
-- Why are there multiple app options?
-  - To support both lab sample verification and custom input testing in one run.
+- Why is pyramid square-based only?
+  - The lab specifies a square-based pyramid, so the implementation intentionally does not support rectangular-base pyramid edge cases.

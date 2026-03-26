@@ -9,7 +9,11 @@ public class Cylinder implements Shape {
 
     @Override
     public double calculateArea() {
-        return 2 * Math.PI * radius * (radius + height);
+        Shape topCircle = new Circle(radius);
+        Shape bottomCircle = new Circle(radius);
+        Shape curvedSurface = new Rectangle(2 * Math.PI * radius, height);
+
+        return topCircle.calculateArea() + bottomCircle.calculateArea() + curvedSurface.calculateArea();
     }
 
     @Override
