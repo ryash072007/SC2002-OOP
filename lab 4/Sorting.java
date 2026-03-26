@@ -30,7 +30,6 @@ public class Sorting
 		{
 			T key = list[index];
 			int position = index;
-			// Shift smaller values to the right for descending order
 			while (position > 0 && key.compareTo(list[position-1]) > 0)
 			{
 				list[position] = list[position-1];

@@ -16,6 +16,7 @@ public class WeeklySales
 		salesStaff[5] = new SalePerson("Jane", "Black", 3000);
 		salesStaff[6] = new SalePerson("Harry", "Taylor", 7300);
 		salesStaff[7] = new SalePerson("Andy", "Adams", 5000);
+		
 		salesStaff[8] = new SalePerson("Jim", "Doe", 2850);
 		salesStaff[9] = new SalePerson("Walt", "Smith", 3000);
 

@@ -45,6 +45,6 @@ public class SalePerson implements Comparable<SalePerson> {
         if (salesCompare != 0) {
             return salesCompare;
         }
-        return lastName.compareTo(o.lastName);
+        return o.lastName.compareTo(lastName);
     }
 }
